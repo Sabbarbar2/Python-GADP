@@ -19,6 +19,7 @@ si pere
 """
 # nu conteaza tipul de ghilimele cand scriem pe mai multe linii
 print(mesaj)
+# print(mesaj[0:2])
 
 #print(mesaj2)
 
