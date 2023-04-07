@@ -15,3 +15,4 @@ lista = [8, -2, 's', 3.1, "Ana are mere", 8, None, [1,2,3, [4,5,6]]]
 # lista.clear()
 print(lista[7][3][1])
 # print(len(lista))
+

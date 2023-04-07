@@ -6,8 +6,8 @@ rezultat = 0
 #     a += 1
     # break
 
-# for i in range(10):
-#     print(f"set instructiuni {i}")
+for i in range(10):
+    print(f"set instructiuni {i}")
 
 # for index, value in enumerate ([9, 8, 7]):
 #     print(f'index {index}, value {value}')
@@ -21,5 +21,5 @@ dictionar = {1: 'a', 2: 'b', 3: 'c'}
 # for index, value in dictionar.items():
 #     print(f'key: {index}, value {value}')
 
-for i in lista:
-    print(i)
+# for i in lista:
+#     print(i)
