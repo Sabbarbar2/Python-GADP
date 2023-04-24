@@ -13,25 +13,28 @@ while True:
         with open('tasks.txt', 'r') as file:
             tasks = file.read().splitlines()
             print('Alege metoda de sortare a task-urilor afisate de mai jos:\n')
+            tasks_ordered = [task.split(',') for task in tasks]
+            # print(tasks_ordered)
             alegere_sortare = int(input('1 - sortare ascendentă task\n2 - sortare descendentă task\n3 - sortare ascendentă data\n4 - sortare descendentă data\n5 - sortare ascendentă persoana responsabilă\n6 - sortare descendentă persoană responsabilă\n7 - sortare ascendentă categorie\n8 - sortare descendentă categorie:\n'))
             if alegere_sortare == 1:
-                res = sorted(tasks, key=itemgetter(0), reverse=False)
+                res = sorted(tasks_ordered, key=itemgetter(0), reverse=False)
             elif alegere_sortare == 2:
-                res = sorted(tasks, key=itemgetter(0), reverse=True)
+                res = sorted(tasks_ordered, key=itemgetter(0), reverse=True)
             elif alegere_sortare == 3:
-                res = sorted(tasks, key=itemgetter(1), reverse=False)
+                res = sorted(tasks_ordered, key=itemgetter(1), reverse=False)
             elif alegere_sortare == 4:
-                res = sorted(tasks, key=itemgetter(1), reverse=True)
+                res = sorted(tasks_ordered, key=itemgetter(1), reverse=True)
             elif alegere_sortare == 5:
-                res = sorted(tasks, key=itemgetter(2), reverse=False)
+                res = sorted(tasks_ordered, key=itemgetter(2), reverse=False)
             elif alegere_sortare == 6:
-                res = sorted(tasks, key=itemgetter(2), reverse=True)
+                res = sorted(tasks_ordered, key=itemgetter(2), reverse=True)
             elif alegere_sortare == 7:
-                res = sorted(tasks, key=itemgetter(3), reverse=False)
+                res = sorted(tasks_ordered, key=itemgetter(3), reverse=False)
             elif alegere_sortare == 8:
-                res = sorted(tasks, key=itemgetter(3), reverse=True)
-            result = '\n'.join(res)
-            print(f"Task-urile sunt:\n{result}")
+                res = sorted(tasks_ordered, key=itemgetter(3), reverse=True)
+            # result = '\n'.join(res)
+            # print(f"Task-urile sunt:\n{res}")
+            print('\n'.join(' '.join(map(str, sl)) for sl in res))
         file.close()
     elif alegere == 3:
         with open('categories.txt', 'r+') as file:

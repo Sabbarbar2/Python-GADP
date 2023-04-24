@@ -1,6 +1,6 @@
 curs
 job
 shopping
-alta categorie
+alta
 altceva
 zet
