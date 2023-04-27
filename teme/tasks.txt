@@ -1,6 +1,6 @@
-proiect,23.04.2021 21:30,Mincu Andrei,job
-proiect,23.04.2021 21:30,Mincu Andrei,shopping
-proiect,23.04.2021 21:30,Mincu Andrei,curs
-proiect,23.04.2021 21:30,Mincu Andrei,alta categorie
-proiect,21.04.2023 21:30,Andrei Costin,altceva
-alfabet,23.04.2022 13:30,Marian Cosma,zet
+proiect,23.04.2021,Mincu Andrei,job
+proiect,23.04.2021,Mincu Andrei,shopping
+proiect,23.04.2021,Mincu Andrei,curs
+proiect,23.04.2021,Mincu Andrei,alta
+proiect,21.04.2023,Andrei Costin,altceva
+alfabet,23.04.2022,Marian Cosma,zet
