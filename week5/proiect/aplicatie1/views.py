@@ -19,7 +19,6 @@ class LocationView(LoginRequiredMixin, ListView):
         return data
 
 
-
 class CreateLocationView(LoginRequiredMixin, CreateView):
     model = Location
     fields = ['city', 'country']
