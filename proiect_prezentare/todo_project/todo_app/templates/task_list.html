@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Task List</h2>
+  <a href="{% url 'task_create' %}">Add a new task</a>
+
+  {% for field in fields %}
+  <a href="?sort_by={{ field }}">Sort by {{ field }}</a>
+  {% endfor %}
+
+  <form method="GET">
+    <label for="filter_user">Filter by User:</label>
+    <input type="text" name="filter_user" id="filter_user" value="{{ request.GET.filter_user }}">
+
+    <label for="filter_task">Filter by Task:</label>
+    <input type="text" name="filter_task" id="filter_task" value="{{ request.GET.filter_task }}">
+
+    <input type="submit" value="Filter">
+  </form>
+
+  <ul>
+    {% for task in tasks %}
+      <li>
+        {{ task.user.username }} - {{ task.task }} - {{ task.deadline }}
+        <a href="{% url 'task_edit' task.pk %}">Edit</a>
+        <a href="{% url 'task_delete' task.pk %}">Delete</a>
+      </li>
+    {% empty %}
+      <li>No tasks available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

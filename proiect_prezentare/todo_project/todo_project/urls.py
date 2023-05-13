@@ -1,5 +1,5 @@
 """
-URL configuration for proiect project.
+URL configuration for todo_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,13 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth.views import LoginView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('locations/', include('aplicatie1.urls')),
-    path('', include('django.contrib.auth.urls'), {'next_page': '/'}, name='login'),
-    path('', LoginView.as_view(template_name='registration/login.html'), name='login'),
-    path('profile/', include('user_profile.urls')),
-    path('api/', include('api.urls')),
+    path("admin/", admin.site.urls),
+    path("", include("todo_app.urls")),
 ]
