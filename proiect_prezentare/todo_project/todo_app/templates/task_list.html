@@ -21,7 +21,7 @@
   <ul>
     {% for task in tasks %}
       <li>
-        {{ task.user.username }} - {{ task.task }} - {{ task.deadline }}
+        {{ task.user.username }} - {{ task.task }} - {{ task.deadline|date:"Y-m-d" }}
         <a href="{% url 'task_edit' task.pk %}">Edit</a>
         <a href="{% url 'task_delete' task.pk %}">Delete</a>
       </li>
