@@ -20,7 +20,14 @@ def register(request):
 
 @login_required
 def task_list(request):
-    tasks = Task.objects.filter(user=request.user)
+    # tasks = Task.objects.filter(user=request.user)
+
+    current_user = request.user
+
+    if current_user.is_superuser:
+        tasks = Task.objects.all()
+    else:
+        tasks = Task.objects.filter(user=current_user)
 
     sort_by = request.GET.get('sort_by')
     if sort_by:
