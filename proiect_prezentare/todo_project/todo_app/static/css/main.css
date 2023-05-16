@@ -24,6 +24,12 @@ a:hover {
     color: #1f5cb3;
 }
 
+p {
+    display: flex;
+    align-items: right;
+    text-align: center;
+}
+
 header {
     background-color: #4a90e2;
     padding: 20px;

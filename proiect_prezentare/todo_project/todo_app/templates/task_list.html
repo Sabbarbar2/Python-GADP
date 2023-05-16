@@ -4,10 +4,6 @@
   <h2>Task List</h2>
   <a href="{% url 'task_create' %}">Add a new task</a>
 
-  {% for field in fields %}
-  <a href="?sort_by={{ field }}">Sort by {{ field }}</a>
-  {% endfor %}
-
   <form method="GET">
     <label for="filter_user">Filter by User:</label>
     <input type="text" name="filter_user" id="filter_user" value="{{ request.GET.filter_user }}">
